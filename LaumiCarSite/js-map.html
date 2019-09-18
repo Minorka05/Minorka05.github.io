@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+<!--this is the style for the map-->
+ *{
+ margin:0;
+ padding:0;
+}
+h4{
+ text-align:center;
+ margin-bottom:2;
+ margin-top:2;
+ font-size:70px;
+ color:white;
+ font-family:Brush Script MT, Brush Script Std, cursive;
+}
+ #map{
+ height: 400px;
+ width:85%;
+ margin-left:auto;
+ margin-right:auto;
+}
+</style>
+<script>
+ var map;
+      function initMap() {
+  
+ var myLatLng = {lat:40.748, lng:-73.985};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat:40.748, lng:-73.985},
+          zoom: 18
+        });
+  var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hassell Ballet Academy'
+        });
+      }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmOVPik1lf3gIIhF8WobYe809No62PR20&callback=initMap"
+    async defer></script>
+</head>
+
+<body>
+
+<<div id="map"></div><br>
+
+</body>
+</html>

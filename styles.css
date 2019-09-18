@@ -1,0 +1,397 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+	background-color: #2B7777;
+	color: #fff;
+    text-align: center;
+    height: 100vh;
+    width:100%;
+}
+
+
+.nav{
+	background-color: #2D2F4B;
+	color: #000000;
+	list-style: none;
+	text-align: right;
+    padding: 30px 0 30px 0;
+    
+   
+    
+    
+    
+    
+}
+
+.nav > li{
+	display: inline-block;
+	padding: 0 25px 0 25px;
+    font-size: 20px;
+    
+}
+
+.nav > li > a{
+	text-decoration: none;
+    color: #1D8983;
+    
+}
+
+.nav > li > a:hover{
+    color: #a3610a;
+    
+}
+
+.logo{
+    float: left;
+    padding-left: 20px;
+    
+}
+
+.logo > img{
+    width: 75px;
+    position: absolute;
+    height: 75px;
+    left: 5%;
+    top: 0;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+
+section#home{
+    background-image: url("mainbackground.jpg");
+    alt:kenrick-mills-3-EiAnsIXps-unsplash; 
+       
+}
+
+section#work{
+    background-color: #2D2F4B;
+    
+}
+
+
+
+/*custom profile name*/
+#portname{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 5.5s;
+}
+
+#portname path:nth-child(1){
+    stroke-dasharray: 572px;
+    stroke-dashoffset: 572px;
+    animation: line-anim 2s ease forwards;
+}
+
+#portname path:nth-child(2){
+    stroke-dasharray: 463px;
+    stroke-dashoffset: 463px;
+    animation: line-anim 2s ease forwards 0.5s;
+}
+#portname path:nth-child(3){
+    stroke-dasharray: 495px;
+    stroke-dashoffset: 495px;
+    animation: line-anim 2s ease forwards 0.10s;
+}
+#portname path:nth-child(4){
+    stroke-dasharray: 227px;
+    stroke-dashoffset: 227px;
+    animation: line-anim 2s ease forwards 0.15s;
+}
+#portname path:nth-child(5){
+    stroke-dasharray: 635px;
+    stroke-dashoffset:635px;
+    animation: line-anim 2s ease forwards 0.20s; 
+}
+#portname path:nth-child(6){
+    stroke-dasharray: 604px;
+    stroke-dashoffset: 604px;
+    animation: line-anim 2s ease forwards 0.25s;
+}
+#portname path:nth-child(7){
+    stroke-dasharray: 463px;
+    stroke-dashoffset: 463px;
+    animation: line-anim 2s ease forwards 0.30s;
+}
+#portname path:nth-child(8){
+    stroke-dasharray: 550px;
+    stroke-dashoffset: 550px;
+    animation: line-anim 2s ease forwards 0.35s;
+}
+#portname path:nth-child(9){
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 50px;
+    animation: line-anim 2s ease forwards 0.40s;
+}
+#portname path:nth-child(10){
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 50px;
+    animation: line-anim 2s ease forwards 0.45s;
+}
+#portnamee path:nth-child(11){
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 50px;
+    animation: line-anim 2s ease forwards 0.50s;
+}
+#portname path:nth-child(12){
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 50px;
+    animation: line-anim 2s ease forwards 0.55s;
+}
+#portname path:nth-child(13){
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 50px; 
+    animation: line-anim 2s ease forwards 0.60s;
+}
+#portname path:nth-child(14){
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 50px;
+    animation: line-anim 2s ease forwards 0.65s;
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+
+.container{
+	max-width:960px;
+	margin: auto;
+    padding: 5px;
+    top: 5%;
+
+}
+
+
+#content {
+	position:relative;
+	animation-name:content;
+	animation-duration: 3s;
+    animation-fill-mode: forwards;
+    color:white;
+}
+
+/* makes the lipsum arrive from the left */
+@keyframes content{
+	0%   {right:-100px;}
+	100% {right: 0;}
+}
+
+#content > h1 {
+    color:white;
+    padding: 3%;
+}
+
+
+/*3D card number 1 flipping beginning*/
+.card{
+    width:400px;
+    padding-top: 20px;
+    
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap');
+
+:root{
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --clr: #b7c9e5;
+}
+
+
+.cardContent{
+    text-align: center;
+    position: relative;
+    padding: 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .cardContent{
+    transform: rotateY(.5turn);
+}
+
+.cardFront, .cardBack{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0;
+    padding: 8em 4em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+    background-color: var(--clr);
+    background-image:url(https://images.unsplash.com/photo-1427301229091-8cd171473e32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+
+}
+.cardFront::before {
+    content: '';
+    display: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom:var(--spacer);
+    left:var(--spacer);
+    right:var(--spacer);
+    border: 3px solid currentColor;
+    transform: var(--level-one);
+    grid-row: 1/3;
+}
+ 
+
+.cardTitle{
+  font-size: 3.5rem;
+  transform: var(--level-three);  
+  order: 2;
+  text-transform: uppercase;
+}
+
+.cardSubtitle{
+    transform: var(--level-two);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    font-weight: var(--fw-bold);
+    opacity: .7;
+
+}
+
+.cardBody{
+    transform: var(--level-two); 
+    font-weight: var(--fw-normal);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: black;
+}
+
+.cardBack{
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background-color: #333;
+
+}
+.cardLink{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size:25px;
+    width: 140px;
+    height: 60px;
+    border-radius: 50px;
+    line-height: 60px;
+    text-align: center;
+    border: 3px solid #2B7777;
+    display: block;
+    text-decoration: none;
+    margin: 10px auto;
+    color:#009688;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    transition: .3s;
+    
+}
+
+.cardLink::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #2B7777;
+    opacity: .5;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .3s;
+}
+
+.carLink::after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #2B7777;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .3s;
+    transition-delay: .2s;
+}
+
+.cardLink:hover{
+    color:#fff;
+}
+
+.cardLink:hover:before{
+    top: 0;
+
+}
+.cardLink:hover:after{
+    top: 0;
+    
+}
+
+/*3D card number 1 flipping end*/
+
+section#contact{
+    background-image: url("mainbackground.jpg");
+    height: 40%; 
+}
+
+.contct > h1{
+    font-weight: lighter;
+    font-size: 30px;
+    color:#fff;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+li{
+    list-style: none;
+    margin: 10px 30px;
+    display: inline-block;
+    font-size: 30px;
+    color: #fff;
+}
+
+li:hover{
+    color: #a3610a;
+
+}

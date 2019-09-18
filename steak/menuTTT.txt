@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+<head>
+<style>
+
+ body,html{
+  background-image:url("bulb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+
+<body id="top">
+
+<a href="index.html"><img src="minorkas.jpg" alt="logo" width="500" height="200"/></a>
+<a href="index.html"><img src="home.jpg" alt="home index" width="125" height="100"/></a>
+<a href="menu.html"><img src="menu.jpg" alt="menu index" width="125" height="100"/></a>
+<a href="activities.html"><img src="activities.jpg" alt="activities index" width="125" height="100"/></a>
+
+<h3><font size="30" color="purple" align="center">Our exquisite <B>Menu</B> consist of some of the most delicous and fresh steak around our the US.
+    In addition, here at Minorka's restaurant we have a limited special drink called Curacao.
+    To learn more, please click on each picture to explore the menu. 
+</h3>
+
+<a href="Dinner.html"><img src="minorka'sdinner.jpg" alt="Steak" width="400" height="250"></a>
+<a href="Kids.html"><img src="minorkaskids.jpg" alt="kid's meal" width="400" height="250"></a>
+<a href="Drink.html"><img src="bluedrink.jpg" alt="Bevarages" width="400" height="250"></a><br>
+
+<a href="#top"><img src="Up-Arrow.jpg" width="50" height="50"  align="right"</a>
+<a href="mailto:Minorkahassell@gmail.com">Contact Us</a>
+</body>
+</html>

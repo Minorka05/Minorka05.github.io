@@ -1,0 +1,117 @@
+<DOCTYPE html>
+<html>
+<head>
+<style>
+
+body,html{
+  background-image:url("bulb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+table, th, td{
+ border: 3px solid pink;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+  height: 30px;
+  text-align: center;
+  color:white;
+  font-size: 30px;
+  background-image: url("woodbrown.jpg");
+}
+
+td{
+ background-color:pink;
+ color:white;
+ font-size:40px;
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<a href="index.html"><img src="minorkas.jpg" width="500" height="200"/></a>
+<a href="index.html"><img src="home.jpg" width="125" height="100/></a>
+<a href="menu.html"><img src="menu.jpg" width="125" height="100"/></a>
+<a href="activities.html"><img src="activities.jpg" width="125" height="100"/></a><br>
+
+<center>
+<a href="Dinner.html"><img src="minorka'sdinner.jpg" alt="Steak" width="200" height="100"/></a>
+<a href="Kids.html"><img src="minorkaskids.jpg" alt="kid's meal" width="200" height="100"/></a>
+<a href="Drink.html"><img src="bluedrink.jpg" alt="Bevarages" width="200" height="100"/></a>
+
+
+
+<table>
+ <th colspan="4">Margaritas</th>
+ </tr>
+ <tr>
+ <td><img src="margarita1.jpg" alt="margaritas" width="400" height="300"></td>
+ <td>
+   <ul style="list-style-type:none">
+   <li>lime margarita</li>
+   <li>chery margarita</li>
+   <p style="font-size:170%;" align="left">$8.50</p>
+   </ul>
+ </td>
+ <td><img src="margarita2.jpg" alt="cherry margarita" width="400" height="300"></td>
+ </tr>
+
+ <th colspan="4">Curacao</th>
+ </tr>
+ <tr>
+ <td><img src="curacao1.jpg" alt="curacao liquor" width="400" height="300"></td>
+ <td>
+   <ul style="list-style-type:none">
+   <li>Blue Curacao</li>
+   <li>Green Curacao</li>
+   <p style="font-size:170%;" align="left">$9.00</p>
+   </ul>
+ </td>
+ <td><img src="curacao2.jpg" alt="curacao liquor" width="400" height="300"></td>
+ </tr>
+
+ <th colspan="4">Cocktail</th>
+ </tr>
+ <tr>
+ <td><img src="mojito.jpg" alt="curacao liquor" width="400" height="300"></td>
+ <td>
+   <ul style="list-style-type:none">
+   <li>Mojito</li>
+   <li>Martini</li>
+   <p style="font-size:170%;" align="left">$7.50</p>
+   </ul>
+ </td>
+ <td><img src="martini.jpg" alt="curacao liquor" width="400" height="300"></td>
+ </tr>
+
+ <th colspan="4">Beer</th>
+ </tr>
+ <tr>
+ <td><img src="heiniken.jpg" alt="Heineken" width="400" height="300"></td>
+ <td>
+   <ul style="list-style-type:none">
+   <li>Heineken</li>
+   <li>Corona</li>
+   <p style="font-size:170%;" align="left">$5.00</p>
+   </ul>
+ </td>
+ <td><img src="cororna.jpg" alt="corona" width="400" height="300"></td>
+ </tr>
+
+
+</center>
+
+</table>
+
+<a href="#top">Go to top of page</a>
+</body>
+</html>

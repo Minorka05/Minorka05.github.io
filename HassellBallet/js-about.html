@@ -1,0 +1,141 @@
+<html>
+<head>
+<style>
+body{
+ background-image:url("softpink.jpg");
+ background-position: center;
+ background-repeat:no-repeat;
+ background-size:cover;
+}
+.nav{
+ list-style:none;
+ text-align:center;
+ padding 20px 0 0 0;
+}
+.nav > li{
+ display:inline-block;
+ padding:10px 35px 10px 35px;
+ font-size:20px;
+}
+.nav > li >a{
+ text-decoration:none;
+ color:#000000;
+}
+.nav > li > a:hover{
+ color:#c1c1c1;
+}
+img{ 
+ width:900;
+ height:350;
+}
+p{
+ text-align:center;
+ font-size:50px;
+ color:white;
+ font-family:Brush Script MT, Brush Script Std, cursive;
+
+}
+.act1>img{
+ width:700;
+ height:450;
+}
+.act2>img{
+ width:700;
+ height:450;
+}
+.act3>img{
+ width:700;
+ height:400;
+}
+
+.contactBanner{
+  text-align:center;
+  font-size:30px;
+  width:100%;
+  display:block;
+  height:200px;
+  background-color:black;
+  color:white;
+  font-family:Brush Script MT, Brush Script Std, cursive;
+}
+.contactBanner > a{
+ color:white;
+
+}
+</style>
+
+<script>
+var imgArray =new Array(5);
+var index = 0;
+
+function cycle(){
+document.banner.src = imgArray[index].src;
+ index++;
+ if(index > 4){
+   index = 0;
+ }
+ setTimeout("cycle()", 2000);
+ return;
+ }
+
+function startup(){
+ imgArray[0]=new Image;
+ imgArray[0].src="pic1.jpg";
+ imgArray[1]=new Image;
+ imgArray[1].src="pic2.jpg";
+ imgArray[2]=new Image;
+ imgArray[2].src="pic3.jpg";
+ imgArray[3]=new Image;
+ imgArray[3].src="pic4.jpg";
+ imgArray[4]=new Image;
+ imgArray[4].src="pic5.jpg";
+ cycle(); 
+ return;
+}
+</script>
+</head>
+
+<body id="top" onLoad="startup()">
+<ul class="nav">
+  <li><a href="index.html">Home</a><li>
+  <li><a href="js-about.html">About</a><li>
+  <li><a href="js-radio.html">Apply Now</a><li>
+</ul>
+
+<div align="center">
+<img name="banner" src="pic1.jpg">
+</div>
+
+<p>
+Hassell Ballet Academy was founded in 2015. Ever since our goal is to make your child excelent at ballet.
+We specialized with children between the ages of 3 and 17 years old regardless of the gender.
+</p>
+
+<div class="act1">
+<img src="competition.jpg" alt="dance of the sugar plum" align="left"><br><p>
+	Here at Hassell Academy we hold competitions between our girls every end of the month
+        At the end of 5 months we then choose the 5 winners to go compete against other schools.</p><br>
+</div>
+
+<div class="act2">
+<img src="toddlerball.jpg" alt="silicon valley" align="right"><br><p>
+	In addition we specialice in training toddlers. We hold monthly shows of toddlers ballet dancer.
+        These shows are avaliable to all parents of registered children</p><br>
+
+<div class="act3">
+<img src="thirdaboutus.jpg" alt="silicon valley" align="left"><br><p>
+	The goal is to make your dreams come true. We know you can do it. 
+        That's why we are here as your mentor to guide and prepare you</p><br>
+
+
+<div class="contactBanner">
+<address>
+<a href="mailto:Minorkahassell@gmail.com">Contact Us</a><br> 
+350 fifth avenue<br />
+Manhattan, NY 10001<br />
+718-264-2900
+</address>
+<a href="#top">Top of Page</a>
+</div>
+</body>
+</html>

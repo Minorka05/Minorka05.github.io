@@ -1,0 +1,404 @@
+<html>
+<style>
+
+body,html{
+  background-image:url("picbackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img{ 
+ width:700;
+ height:400;
+}
+</style>
+<head>
+<title>Computer</title>
+<script type="text/javascript">
+function validation(){
+//user
+if (document.getElementById("user").value == 0){
+alert('please enter your username');
+document.getElementById("user").style.backgroundColor="red";
+return false; 
+}
+//password
+if (document.getElementById("pass").value == 0){
+alert('please enter your password');
+document.getElementById("pass").style.backgroundColor="red";
+return false; 
+}
+//first name
+if (document.getElementById("fname").value == 0){
+alert('please enter name');
+document.getElementById("fname").style.backgroundColor="red";
+return false; 
+}
+else if (!isNaN(document.getElementById("fname").value)){
+alert('please enter only letters');
+document.getElementById("fname").style.backgroundColor="red";
+return false;
+}
+//last name
+else if(document.getElementById("lname").value == 0){
+alert('please enter last name');
+document.getElementById("lname").style.backgroundColor="red";
+return false;  
+}
+else if (!isNaN(document.getElementById("lname").value)){
+alert('please enter only characters');
+document.getElementById("lname").style.backgroundColor="red"; 
+return false; 
+}
+//date of birth
+if (document.getElementById("data").value == 0){
+alert('please enter your date of birth');
+document.getElementById("data").style.backgroundColor="red";
+return false; 
+}
+//parent's full name
+else if(document.getElementById("Cname").value == 0){
+alert('please enter childs name');
+document.getElementById("Cname").style.backgroundColor="red";
+return false;  
+}
+else if (!isNaN(document.getElementById("Cname").value)){
+alert('please enter only characters');
+document.getElementById("Cname").style.backgroundColor="red"; 
+return false; 
+}
+//phone number
+else if(document.getElementById("phone").value == 0){
+alert('please enter phone number');
+document.getElementById("phone").style.backgroundColor="red";
+return false;  
+}
+else if (isNaN(document.getElementById("phone").value)){
+alert('please enter a valid phone number');
+document.getElementById("phone").style.backgroundColor="red"; 
+return false; 
+}
+else if(document.getElementById("phone").value.length>10){
+window.alert('Your cellphone number can only be 10 numbers');
+document.getElementById("phone").style.backgroundColor="red";
+return false;
+}
+//Email
+if(document.getElementById("email").value == 0){
+window.alert('please enter your email');
+document.getElementById("email").style.backgroundColor="red";
+return false;  
+}
+else if(document.getElementById("email").value.indexOf("@")<0){
+window.alert('please enter a valid email');
+document.getElementById("email").style.backgroundColor="red";
+return false; 
+}
+else if(document.getElementById("email").value.indexOf(".")<0){
+window.alert('please enter a valid email');
+document.getElementById("email").style.backgroundColor="red";
+return false;
+}
+//Street
+if(document.getElementById("street").value==0){
+window.alert('please enter your street');
+document.getElementById("street").style.backgroundColor="red";
+return false; 
+}
+if(document.getElementById("city").value==0){
+window.alert('please enter your city');
+document.getElementById("city").style.backgroundColor="red";
+return false; 
+}
+//state
+if(document.getElementById("state").value==0){
+window.alert('please enter your state');
+document.getElementById("state").style.backgroundColor="red";
+return false; 
+}
+else if (!isNaN(document.getElementById("state").value)){
+alert('your state can only be letters');
+document.getElementById("state").style.backgroundColor="red";
+return false;
+}
+else if(document.getElementById("state").value.length>2){
+window.alert('Your state can only be 2 letters');
+document.getElementById("state").style.backgroundColor="red";
+return false;
+}
+
+if(document.getElementById("zip").value==0){
+window.alert('please enter your zi-code');
+document.getElementById("zip").style.backgroundColor="red";
+return false; 
+}
+//Zip
+else if(isNaN(document.getElementById("zip").value)){
+alert('your zip code can only be numbers');
+document.getElementById("zip").style.backgroundColor="red"; 
+return false;
+}
+else if(document.getElementById("zip").value.length>5){
+window.alert('Your zipcode can only be 5 numbers');
+document.getElementById("zip").style.backgroundColor="red";
+return false;
+}
+else{
+document.getElementById("user").style.backgroundColor="green";
+document.getElementById("pass").style.backgroundColor="green";
+document.getElementById("fname").style.backgroundColor="green";
+document.getElementById("lname").style.backgroundColor="green";
+document.getElementById("data").style.backgroundColor="green";
+document.getElementById("Cname").style.backgroundColor="green";
+document.getElementById("phone").style.backgroundColor="green";
+document.getElementById("email").style.backgroundColor="green";
+document.getElementById("street").style.backgroundColor="green";
+document.getElementById("city").style.backgroundColor="green";
+document.getElementById("state").style.backgroundColor="green";
+document.getElementById("zip").style.backgroundColor="green";
+}
+}
+
+function GenderRadio(){
+ if(document.form.gen[0].checked) return true;
+ if(document.form.gen[1].checked) return true;
+ return false;
+}
+
+function validateRadio(){
+ if(document.form.pack[0].checked) return true;
+ if(document.form.pack[1].checked) return true;
+ if(document.form.pack[2].checked) return true;
+ return false;
+}
+
+function checkform(){
+if (document.form.option1.checked) return true;
+if (document.form.option2.checked) return true;
+if (document.form.option3.checked) return true;
+return false;
+}
+
+function subjectBox(){
+if (document.getElementById("subject").value == 0){
+alert('please enter the subject');
+document.getElementById("subject").style.backgroundColor="red";
+return false; 
+}
+else{
+document.getElementById("subject").style.backgroundColor="green";
+}
+}
+function commentbox(){
+if (document.getElementById("comment").value == 0){
+alert('please enter your Quetions or Sugestions');
+document.getElementById("comment").style.backgroundColor="red";
+return false; 
+}
+else{
+document.getElementById("comment").style.backgroundColor="green";
+}
+}
+
+function doClear(){
+ document.form.user.value="";
+ document.form.pass.value="";
+ document.form.fname.value="";
+ document.form.lname.value="";
+ document.form.data.value="";
+ document.form.Cname.value="";
+ document.form.phone.value="";
+ document.form.email.value="";
+ document.form.street.value="";
+ document.form.city.value="";
+ document.form.state.value="";
+ document.form.zip.value="";
+
+ document.form.gen[0].checked = false;
+ document.form.gen[1].checked = false;
+
+ document.form.pack[0].checked = false;
+ document.form.pack[1].checked = false;
+ document.form.pack[2].checked = false;
+
+ document.form.option1.checked = false;
+ document.form.option2.checked = false;
+ document.form.option3.checked = false;
+
+document.form.subject.value=""; 
+document.form.comment.value="";
+ return;
+}
+
+function doSubmit(){
+ if(validation()==false){
+ return;
+}
+ if(GenderRadio()==false){
+ alert("please select gender");
+ return;
+}
+ if(validateRadio()==false){
+ alert("please select a package");
+ return;
+}
+if(checkform()==false){
+ alert("please check a box");
+ return;
+}
+if(subjectBox()==false){
+return;
+}
+if(commentbox()==false){
+return;
+}
+ alert("Your application has been submitted");
+}
+ 
+</script>
+</head>
+<body>
+ <form name="ComputerForm">
+ <h3>The Computer Repair Form</h3>
+ <p>
+  <h4>Step 1: enter your Name, address and phone number:</h4>
+ 
+  <font face="courier New">
+   Name: &nbsp;&nbsp;&nbsp;<input Name="customer" size="50"
+   type="text"><br>
+   Address: <input Name="Address" size="50" type="text"><br>
+   City: &nbsp; &nbsp; &nbsp;<input Name="City" size="15" type="text">
+   State: <input Name="State" size="2" type="TEXT">
+   Zip: <input Name="Zip" size="5" type="text"><br>
+   Phone: &nbsp;&nbsp;&nbsp;<input Name="Phone" size="50" type="text"><br>
+  </font>
+ </p>
+
+ <p>
+  <h4>Step 2: Select your Device:</h4>
+  <font face="courier New">
+  <input name="device" type="checkbox">Desktop
+  <input name="device" type="checkbox">Printer
+  <input name="device" type="checkbox">Cellphone<br>
+  <input name="device" type="checkbox">Console
+  <input name="device" type="checkbox">Laptop
+  <input name="device" type="checkbox">Other<br>
+  </font>
+  </p>
+ 
+<input type="button" value="Submit Order" onClick="doSubmit()">
+<input type="button" value="Clear" onClick="doClear()">
+</form>
+</body>
+<font face="Verdana, sans-serif" color="white">
+<div class="myform">
+<form name="form" method="post">
+<h5>Personal Information</h5>
+<tr>
+<td> Username</td>
+<td><input type="text" id="user" name="user"></td><br>
+<td>Password</td>
+<td><input type="password" id="pass" name="pass"></td><br>
+<td> First Name</td>
+<td><input type="text" id="fname" name="fname"></td><br>
+<td> Last name</td>
+<td><input type="text" id="lname" name="lname"></td><br>
+<td>Date of Birth</td>
+<td><input type="date" name="data" id="data" /></td><br>
+<td> Parent's Name</td>
+<td><input type="text" id="Cname" name="Cname"></td><br>
+<td> Mobile</td>
+<td><input type="text" id="phone" name="phone"></td><br>
+<td> Email</td>
+<td><input type="text" id="email" name="email"></td><br>
+<td> Street</td>
+<td><input type="text" id="street" name="street"></td><br>
+<td> City</td>
+<td><input type="text" id="city" name="city"></td><br>
+<td> State</td>
+<td><input type="text" id="state" name="state"></td><br>
+<td> zip</td>
+<td><input type="text" id="zip" name="zip"></td><br><br>
+</tr>
+
+<p>
+ <h5>Gender</h5>
+ <input class="formRadio" name="gen" type="radio">Female
+ <input class="formRadio" name="gen" type="radio">Male
+</p>
+
+<center>
+<table>
+ <tr>
+  <th>Standard</th>
+  <th>Platniun</th>
+  <th>Gold</th>
+</tr>
+<tr>
+ <td>
+  <ul>
+    <li>3 Months Plan</li>
+    <li>3 times a week</li>
+    <li>snacks</li>
+  </ul>
+</td>
+ <td>
+  <ul>
+    <li>6 Months Plan</li>
+    <li>4 times a week</li>
+    <li>snacks</li>
+    <li>Free 1 hour practice weekly</li>
+  </ul>
+</td>
+ <td>
+  <ul>
+    <li>9 Months Plan</li>
+    <li>5 times a week</li>
+    <li>snacks</li>
+    <li>Free 2 hour practice weekly</li>
+  </ul>
+</td>
+</tr>
+<tr>
+  <th>$1399</th>
+  <th>$1599</th>
+  <th>$2099</th>
+</tr>
+</table>
+</center>
+
+<p>
+ <h5>Select your Package</h5>
+ <input class="formRadio" name="pack" type="radio">Standard
+ <input class="formRadio" name="pack" type="radio">Platniun
+ <input class="formRadio" name="pack" type="radio">Gold
+</p>
+
+ <p>
+  <h5>Contact Preference:</h5>
+  <input class="formcheck" type="checkbox" name="option1" value="option1">Phone
+  <input class="formcheck"  type="checkbox" name="option2" value="option2">Email
+  <input class="formcheck" type="checkbox" name="option3" value="option3">Mail<br>
+ </p>
+
+<p>Subject</p>
+<tr>
+<td><textarea class="subj" id="subject" name="subject"></textarea></td>
+</tr>
+
+<p>Questions and Suggestions</p>
+<tr>
+<td><textarea id="comment" name="comment"></textarea></td>
+</tr>
+
+<p>
+<input class="clear" type="button" value="Clear" onClick="doClear()">
+<input class="submit" type="button" value="Submit" onClick="doSubmit()">
+</p>
+
+</font>
+</form>
+</div>
+</html>
+  
+  

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body, html {
+  height:100%;
+  color:white;
+  text-align: center;
+  background-image: url('fullziseback_img.jpg')
+}
+.parallax {
+    background-image: url('img_parallax.jpg');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+ list-style:none;
+ text-align:center;
+ padding: 20px 0 0 0;
+}
+.nav > li{
+ display:inline-block;
+ padding:10px 25px 35px 25px;
+ font-size:30px;
+}
+.nav > li >a{
+ text-decoration:none;
+ color:white;
+}
+.nav > li > a:hover{
+ color:#c1c1c1;
+}
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+p {
+   font-size:185%;
+   font-family:Times New Roman;
+}
+h2{
+    color:white;
+    font-size: 55px;
+}
+input[type=text] {
+    width: 15%;
+    height: 35px;
+    background-color: white;
+    background-position: 16px 20px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+input[type=date] {
+    width: 15%;
+    height: 35px;
+    background-color: white;
+    background-position: 16px 20px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+input[type=radio] {
+    width: 5%;
+    height: 20px;
+    background-color:white;
+    padding-left: 20px;
+}
+select {
+    width: 10%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+input[type=button], input[type=submit], input[type=clear] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.info{
+    color:white;
+    font-size: 45px;
+    font-family:Times New Roman;
+    background: none !important;
+}
+</style>
+
+<script>
+function validateForm() {
+    //first-Name
+    if (document.getElementById("fname").value == 0){
+    alert('please enter your First-name');
+    document.getElementById("fname").style.backgroundColor="red";
+    return false; 
+    }
+    else if (!isNaN(document.getElementById("fname").value)){
+    alert('Your first name can only be in letters');
+    document.getElementById("fname").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("fname").style.backgroundColor="green";
+    }
+    //last-name
+    if (document.getElementById("lname").value == 0){
+    alert('please enter your Last-name');
+    document.getElementById("lname").style.backgroundColor="red";
+    return false; 
+    }
+    else if (!isNaN(document.getElementById("lname").value)){
+    alert('Your last name can only be in letters');
+    document.getElementById("lname").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("lname").style.backgroundColor="green";
+    }
+    //date of birth
+    if (document.getElementById("DOB").value == 0){
+    alert('please enter your date of birth');
+    document.getElementById("DOB").style.backgroundColor="red";
+    return false; 
+    }
+    else{
+    document.getElementById("DOB").style.backgroundColor="green";
+    }
+    //Social
+    if(document.getElementById("SN").value==0){
+    window.alert('please enter your social');
+    document.getElementById("SN").style.backgroundColor="red";
+    return false; 
+    }
+    else if (isNaN(document.getElementById("SN").value)){
+    alert('Your social can only be in numbers');
+    document.getElementById("SN").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("SN").value.length < 10){
+    window.alert('Your  social number cannot be less than 10 numbers');
+    document.getElementById("SN").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("SN").value.length > 10){
+    window.alert('Your social number can only be 10 numbers');
+    document.getElementById("SN").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("SN").style.backgroundColor="green";
+    }
+    //Home-Number
+    if(document.getElementById("PNumber").value == 0){
+    alert('please enter Home number');
+    document.getElementById("PNumber").style.backgroundColor="red";
+    return false;  
+    }
+    else if (isNaN(document.getElementById("PNumber").value)){
+    alert('please enter a valid Home number');
+    document.getElementById("PNumber").style.backgroundColor="red"; 
+    return false; 
+    }
+    else if(document.getElementById("PNumber").value.length < 10){
+    window.alert('Your Home phone number cannot be less than 10 numbers');
+    document.getElementById("PNumber").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("PNumber").value.length > 10){
+    window.alert('Your Home phone number cannot be more than 10 numbers');
+    document.getElementById("PNumber").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("PNumber").style.backgroundColor="green";
+    }
+    //Cell-Number
+    if(document.getElementById("CNumber").value == 0){
+    alert('please enter Cell number');
+    document.getElementById("CNumber").style.backgroundColor="red";
+    return false;  
+    }
+    else if (isNaN(document.getElementById("CNumber").value)){
+    alert('please enter a valid Cell number');
+    document.getElementById("CNumber").style.backgroundColor="red"; 
+    return false; 
+    }
+    else if(document.getElementById("CNumber").value.length < 10){
+    window.alert('Your cellphone number cannot be less than 10 numbers');
+    document.getElementById("CNumber").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("CNumber").value.length > 10){
+    window.alert('Your cellphone number can only be 10 numbers');
+    document.getElementById("CNumber").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("CNumber").style.backgroundColor="green";
+    }
+    //Work-Number
+    if(document.getElementById("wNumber").value == 0){
+    alert('please enter Work  number');
+    document.getElementById("wNumber").style.backgroundColor="red";
+    return false;  
+    }
+    else if (isNaN(document.getElementById("wNumber").value)){
+    alert('please enter a valid Work number');
+    document.getElementById("wNumber").style.backgroundColor="red"; 
+    return false; 
+    }
+    else if(document.getElementById("wNumber").value.length < 10){
+    window.alert('Your  Work phone number cannot be less than 10 numbers');
+    document.getElementById("wNumber").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("wNumber").value.length > 10){
+    window.alert('Your Work phone number can only be 10 numbers');
+    document.getElementById("wNumber").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("wNumber").style.backgroundColor="green";
+    }
+    //Email
+    if(document.getElementById("email").value == 0){
+    window.alert('Please enter your email');
+    document.getElementById("email").style.backgroundColor="red";
+    return false;  
+    }
+    else if(document.getElementById("email").value.indexOf("@")<0){
+    window.alert('please enter a valid email');
+    document.getElementById("email").style.backgroundColor="red";
+    return false; 
+    }
+    else if(document.getElementById("email").value.indexOf(".")<0){
+    window.alert('please enter a valid email');
+    document.getElementById("email").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("email").style.backgroundColor="green";
+    }
+    //Street
+    if(document.getElementById("Street").value==0){
+    window.alert('please enter your street');
+    document.getElementById("Street").style.backgroundColor="red";
+    return false; 
+    }
+    else{
+    document.getElementById("Street").style.backgroundColor="green";
+    }
+    //City
+    if(document.getElementById("City").value==0){
+    window.alert('please enter your city');
+    document.getElementById("City").style.backgroundColor="red";
+    return false; 
+    }
+    else if (!isNaN(document.getElementById("City").value)){
+    alert('Your last name can only be in letters');
+    document.getElementById("City").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("City").style.backgroundColor="green";
+    }
+    //Zip-Code
+    if(document.getElementById("zipcode").value==0){
+    window.alert('please enter your zip-code');
+    document.getElementById("zipcode").style.backgroundColor="red";
+    return false; 
+    }
+    else if (isNaN(document.getElementById("zipcode").value)){
+    alert('Your zip-code can only be in numbers');
+    document.getElementById("zipcode").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("zipcode").value.length < 5){
+    window.alert('Your  zip code number cannot be less than 5 numbers');
+    document.getElementById("zipcode").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("zipcode").value.length > 5){
+    window.alert('Your zip codenumber can only be 5 numbers');
+    document.getElementById("zipcode").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("zipcode").style.backgroundColor="green";
+    }
+    
+    //employer
+    if (document.getElementById("Em").value == 0){
+    alert("please enter your employer's name");
+    document.getElementById("Em").style.backgroundColor="red";
+    return false; 
+    }
+    else if (!isNaN(document.getElementById("Em").value)){
+    alert("Your name can only be in letters");
+    document.getElementById("Em").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("Em").style.backgroundColor="green";
+    }
+    
+    //occupation
+    if (document.getElementById("Occupation").value == 0){
+    alert("please enter your occupation name");
+    document.getElementById("Occupation").style.backgroundColor="red";
+    return false; 
+    }
+    else if (!isNaN(document.getElementById("Occupation").value)){
+    alert("Your occupation can only be in letters");
+    document.getElementById("Occupation").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("Occupation").style.backgroundColor="green";
+    }
+    //occupationAdress
+    if (document.getElementById("EmployerStreet").value == 0){
+    alert("please enter your employer's street");
+    document.getElementById("EmployerStreet").style.backgroundColor="red";
+    return false; 
+    }
+    else{
+    document.getElementById("EmployerStreet").style.backgroundColor="green";
+    }
+    //ECity
+    if(document.getElementById("Ecity").value==0){
+    window.alert('please enter your city');
+    document.getElementById("Ecity").style.backgroundColor="red";
+    return false; 
+    }
+    else if (!isNaN(document.getElementById("Ecity").value)){
+    alert('Your city can only be in letters');
+    document.getElementById("Ecity").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("Ecity").style.backgroundColor="green";
+    }
+    //Ezip
+    if(document.getElementById("Ezip").value==0){
+    window.alert('please enter your zip-code');
+    document.getElementById("Ezip").style.backgroundColor="red";
+    return false; 
+    }
+    else if (isNaN(document.getElementById("Ezip").value)){
+    alert('Your zip-code can only be in numbers');
+    document.getElementById("Ezip").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("Ezip").value.length < 5){
+    window.alert('Your  zip code number cannot be less than 5 numbers');
+    document.getElementById("Ezip").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("Ezip").value.length > 5){
+    window.alert('Your zip codenumber can only be 5 numbers');
+    document.getElementById("Ezip").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("Ezip").style.backgroundColor="green";
+    }
+}
+function validateRadio(){
+ if(document.myForm.MS[0].checked) return true;
+ if(document.myForm.MS[1].checked) return true;
+ if(document.myForm.MS[2].checked) return true;
+ if(document.myForm.MS[3].checked) return true;
+ return false;
+}
+function doClear(){
+ document.myForm.fname.value=""
+ document.myForm.lname.value="";
+ document.myForm.lname.value="";
+ document.myForm.PNumber.value="";
+ document.myForm.CNumber.value="";
+ document.myForm.wNumber.value="";
+ document.myForm.email.value="";
+ document.myForm.Street.value="";
+ document.myForm.Apt.value="";
+ document.myForm.City.value="";
+ document.myForm.zipcode.value="";
+ document.myForm.Em.value="";
+ document.myForm.Occupation.value="";
+ document.myForm.EmployerStreet.value="";
+ document.myForm.Ecity.value="";
+ document.myForm.Ezip.value="";
+ document.myForm.MS[0].checked = false;
+ document.myForm.MS[1].checked = false;
+ document.myForm.MS[2].checked = false;
+ document.myForm.MS[3].checked = false;
+  return;
+ }
+function doSubmit(){
+ if (validateForm() ==false){
+ return;
+ }
+ if(validateRadio()==false){
+ alert("please select a package");
+ return;
+ }
+ alert("Your application has been submitted");
+}
+</script>
+</head>
+
+<body>
+
+<div class="parallax">
+   <ul class="nav">
+    <li><a href="index.html">Home</a><li>
+    <li><a href="about.html">About US</a><li>
+    <li><a href="inventory.html">Inventory</a><li>
+    <li><a href="js-app.html">Finance</a><li>
+   </ul>
+ <h2 >Laumi Auto Collection Finance Services</h2>
+   <p>We specialized in providing you with excellent service.
+     Apply for our financing today and someone will call you 
+     as soon as possible to assist you in your financials needs</p>
+</div>
+
+<div style="height:1600px;background-color:grey;font-size:36px">
+  
+ <form name="myForm" onsubmit="return validateForm()" method="post">
+   <h2>Select your car:</h2>
+   <select id="select" class= required>
+     <option value="ModelA">Model A</option>
+     <option value="ModelB">Model B</option>
+     <option value="ModelC">Model C</option>
+     <option value="SUVD">SUV D</option>
+     <option value="SUVE">SUV E</option>
+     <option value="SUVF">SUV F</option>
+     <option value="SportZ">Sport Z</option>
+     <option value="SportW">Sport W</option>
+   </select>
+  <h2>Applicant Information</h2>
+  <input type="text" id="fname" name="fname"  placeholder="First name">
+  <input type="text" id="lname" name="lname"  placeholder="Last-Name">
+  <br>
+  <input type="text" id="SN" name="SN"  placeholder="Social Security">
+  <input type="date" id="DOB"   name="DOB"    placeholder="Date Of birth">
+  <br>
+  <br>
+  <input type="radio"  class="formRadio" name="MS">Single
+  <input type="radio"  class="formRadio" name="MS">Married
+  <input type="radio"  class="formRadio" name="MS">Divorce
+  <input type="radio"  class="formRadio" name="MS">widowed
+  <br>
+  <br>
+  <input type="text" id="PNumber"  name="PNumber"  placeholder="Home-Number">
+  <input type="text" id="CNumber"  name="CNumber"  placeholder="Cell-Number">
+  <input type="text" id="wNumber"  name="wNumber"  placeholder="Work-Number">
+  <br>
+  <input type="text" id="email" name="email" placeholder="E-mail">
+  <br>
+  <h2>Residential Information</h2>
+  <input type="text" id="Street" name="Street"  placeholder="Street">
+  <input type="text" id="Apt"    name="Apt"     placeholder="Apt">
+  <br>
+  <input type="text" id="City"    name="City"  placeholder="City">
+  
+  <select id="select" class= required>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+   </select>	
+							
+  <input type="text" id="zipcode" name="zipcode"  placeholder="Zip-Code">
+  <br>
+  <h2>Employment Information</h2>
+  <input type="text" id="Em"   name="Em"   placeholder="Employer's name">
+  <input type="text" id="Occupation" name="Occupation" placeholder="Occupation">
+  <br>
+  <input type="text" id="EmployerStreet" name="EmployerStreet" placeholder="Employer's Street">
+  <input type="text" id="Ecity" name="Ecity" placeholder="City">
+  <select id="select" class= required>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+  </select>					
+  <input type="text" id="Ezip" name="Ezip" placeholder="Zip-Code">
+  <br>
+  <h2>Special Request</h2>
+  <textarea id="comment" name="comment"></textarea>
+  <br>
+  <input class="Clear"  type="button"  value="Clear"  onClick="doClear()">
+  <input class="submit" type="button" value="Submit" onClick="doSubmit()">
+ </form>
+</div>
+
+<div class="parallax">
+<div class="info">
+<address>
+<a href="mailto:Minorkahassell@gmail.com">Contact Us</a><br> 
+350 fifth avenue<br />
+Manhattan, NY 10001<br />
+718-264-2901
+</address>
+<a href="#top">Top of Page</a>
+</div>
+
+</body>
+</html>

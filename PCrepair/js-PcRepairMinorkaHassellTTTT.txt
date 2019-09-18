@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Computer Network</title>
+<style>
+
+body,html{
+  background-image:url("picbackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img{ 
+ width:700;
+ height:400;
+}
+
+</style>
+<script>
+var imgArray =new Array(5);
+var index = 0;
+
+function cycle(){
+document.banner.src = imgArray[index].src;
+ index++;
+ if(index > 4){
+   index = 0;
+ }
+ setTimeout("cycle()", 2000);
+ return;
+ }
+
+function startup(){
+ imgArray[0]=new Image;
+ imgArray[0].src="pc1.jpg";
+ imgArray[1]=new Image;
+ imgArray[1].src="pic5.jpg";
+ imgArray[2]=new Image;
+ imgArray[2].src="pc3.jpg";
+ imgArray[3]=new Image;
+ imgArray[3].src="pc4.jpg";
+ imgArray[4]=new Image;
+ imgArray[4].src="pic6.jpg";
+ cycle(); 
+ return;
+}
+
+function doClear(){
+ document.ComputerForm.Customer.value="";
+ document.ComputerForm.Address.value="";
+ document.ComputerForm.City.value="";
+ document.ComputerForm.State.value="";
+ document.ComputerForm.Zip.value="";
+ document.ComputerForm.Phone.value="";
+
+ document.ComputerForm.device[0].checked= false;
+ document.ComputerForm.device[1].checked= false;
+ document.ComputerForm.device[2].checked= false;
+ document.ComputerForm.device[3].checked= false;
+ document.ComputerForm.device[4].checked= false;
+ document.ComputerForm.device[5].checked= false;
+ document.ComputerForm.device[6].checked= false;
+ return;
+}
+
+function ValidateText(){
+ var Customer = document.ComputerForm.Customer.value;
+ if(Customer.length == 0) return false;
+ var Address = document.ComputerForm.Address.value;
+ if(Address.length == 0) return false;
+ var City = document.ComputerForm.City.value;
+ if(City.length==0) return false;
+ var State = document.ComputerForm.State.value;
+ if(State.length == 0) return false;
+ var Zip = document.ComputerForm.Zip.value;
+ if(Zip.length == 0) return false;
+ return true;
+}
+
+function ValidateCheckBox(){
+ if(document.ComputerForm.device[0].checked) return true;
+ if(document.ComputerForm.device[1].checked) return true;
+ if(document.ComputerForm.device[2].checked) return true;
+ if(document.ComputerForm.device[3].checked) return true;
+ if(document.ComputerForm.device[4].checked) return true;
+ if(document.ComputerForm.device[5].checked) return true;
+ return false;
+}
+
+function doSubmit(){
+ if(ValidateText() == false){
+ alert("Missing Name, address, city, state or zipcode");
+ return;
+}
+  if (ValidateCheckBox()== false){
+  alert("Please check a box");
+  return;
+}
+ alert("your order has been submitted.");
+ return;
+}
+
+</script>
+</head>
+
+<body onLoad="startup()">
+ <div align="center">
+  <h1><font size="12">Minorka's Computer Rapair Network</h1>
+  <img name="banner" src="pc1.jpg">
+ </div>
+
+ <form name="ComputerForm">
+ <h3><font size="8">Please Contact Us</h3>
+ <p><font size="6">
+  <h4>Step 1: Enter your name, address and phone number:</h4>
+ 
+  <font face="courier New">
+   Name: &nbsp;&nbsp;&nbsp;<input name="Customer" size="50"
+   type="text"><br>
+   Address: <input name="Address" size="50" type="text"><br>
+   City: &nbsp; &nbsp; &nbsp;<input name="City" size="15" type="text">
+   State: <input name="State" size="2" type="TEXT">
+   Zip: <input name="Zip" size="5" type="text"><br>
+   Phone: &nbsp;&nbsp;&nbsp;<input name="Phone" size="50" type="text"><br>
+  </font>
+ </p>
+
+ <p>
+  <h4>Step 2: Select your Device:</h4>
+  <font face="courier New">
+  <input name="device" type="checkbox" value="option1">Desktop
+  <input name="device" type="checkbox" value="option2">Printer
+  <input name="device" type="checkbox" value="option3">Cellphone<br>
+  <input name="device" type="checkbox" value="option4">Console
+  <input name="device" type="checkbox" value="option5">Laptop
+  <input name="device" type="checkbox" value="option6">Other<br>
+  </font>
+  </p>
+ 
+<input type="button" value="Submit" onClick="doSubmit()">
+<input type="button" value="Clear" onClick="doClear()">
+</form>
+
+
+</body>
+
+</html>

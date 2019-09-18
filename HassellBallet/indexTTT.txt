@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+body{
+ background-image:url("softpink.jpg");
+ background-position: center;
+ background-repeat:no-repeat;
+ background-size:cover;
+}
+.nav{
+ list-style:none;
+ text-align:center;
+ padding 20px 0 0 0;
+}
+.nav > li{
+ display:inline-block;
+ padding:10px 35px 10px 35px;
+ font-size:20px;
+}
+.nav > li >a{
+ text-decoration:none;
+ color:#000000;
+}
+.nav > li > a:hover{
+ color:#c1c1c1;
+}
+.banner{
+  width:100%;
+  display:block;
+}
+.banner > .banner-image{ 
+  width:100%;
+  display:block;
+  height:300px;
+}
+.centered {
+   position: absolute;
+   font-size:80px;
+   font-weigth:bold;
+   top: 150px;
+   left: 175px;
+   color:white;
+   font-family:Brush Script MT, Brush Script Std, cursive;
+}
+h1{
+ text-align:center;
+ font-size:70px;
+ color:white;
+ font-family:Brush Script MT, Brush Script Std, cursive;
+}
+p{
+ text-align:center;
+ font-size:50px;
+ color:white;
+ font-family:Brush Script MT, Brush Script Std, cursive;
+}
+.picshome>img{
+ width:230px;
+ height:350px;
+}
+</style>
+<script type="text/javascript">
+</script>
+</head>
+
+<body id="top">
+<ul class="nav">
+
+  <li><a href="index.html">Home</a><li>
+  <li><a href="js-about.html">About</a><li>
+  <li><a href="js-radio.html">Apply Now</a><li>
+</ul>
+
+ <div class="banner">
+  <img class="banner-image" src="balletbackpg3.jpg">
+  <div class="centered">Hassell Ballet Academy</div>
+ </div>
+
+<h1>Welcome to the Hassell Ballet academy</h1>
+<div class="picshome">
+<img src="home1.jpg" alt="ballare.it" />
+<img src="home2.jpg" alt="aliexpress.com" />
+<img src="home3.jpg" alt="pinterest" />
+<img src="home4.jpg" alt="costumegalary.net" />
+</div>
+
+<p>The Hassell Ballet Academy is a school for children between
+   the ages of 3 and up to 17 years old. Our goal is to enhance 
+   the future of your children as a ballet dancer. In addition, 
+   our main goal is to train your children for the olympics.
+</p>
+<p>Furthermore we have many activities for which age is not a requirement.
+   Be sure to check the about us page to find out more
+</p>
+
+<center>
+<img src="balletquote.jpg" alt="picmonkey" width="700px" height="300px"><br>
+<hr />
+<a href="mailto:Minorkahassell@gmail.com">Contact Us</a>.<br> 
+<a href="#top">Top of Page</a><br>
+</center>
+</body>
+</html>

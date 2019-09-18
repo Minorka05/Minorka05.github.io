@@ -1,0 +1,71 @@
+<DOCTYPE html>
+<html>
+<head>
+<style>
+
+body,html{
+  background-image:url("bulb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p{
+ font-size: 30px;
+ color: purple;
+}
+
+h2, h4{
+  color: purple;
+  font-size: 40px;
+}
+
+hr{
+ border:2;
+ width: 80%;
+ background-color:purple;
+}
+
+</style>
+</head>
+
+<body id="top">
+<table>
+ <tr>
+  <th><a href="index.html"><img src="minorkas.jpg" alt="logo" width="500" height="200"></th></a>
+  <th valign="bottom"><a href="index.html"><img src="home.jpg" alt="home index" width="125" height="100"></th></a>
+  <th valign="bottom"><a href="menu.html"><img src="menu.jpg" alt="menu index" width="125" height="100"></th></a>
+  <th valign="bottom"><a href="activities.html"><img src="activities.jpg" alt="activities index" width="125" height="100"></th></a>
+</tr>
+</table>
+
+<center>
+<h2>Welcome to the activities page</h2>
+<h4>In this page you are able to see the events that we hold in Minorka's restaurant</h4>
+
+<img src="kidsparty.jpg" width="600" height="300" align="right" ><p>
+  At Minorka's restaurant you are able to request birthday parties for kids and adults. 
+  On your day we make you feel special</p><br>
+
+<hr />
+
+<img src="freedrinks.jpg" width="600" height="300" align="right" ><p>
+ Every monday we have the best deal. Starting from 3pm through 11:59pm, 
+ when you buy a been you get a second for <B>FREE</B>. We invite you to join us.</p><br>
+
+<hr />
+
+<img src="pets.jpg" width="600" height="300" align="right" ><p>
+ At Minorka's restaurants we love pets, that's why on wednesday you are allow to bring your <i>Dog</i> or <i>Cat</i> in. 
+ We have a anical daycare section inside Minorka's restaurants</p><br>
+
+<hr />
+
+
+
+
+
+<a href="#top">Go to top of page</a>
+</center>
+</body>
+</html>

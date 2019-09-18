@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  height:100%;
+  text-align: center;
+  background-image: url('fullziseback_img.jpg')
+}
+.parallax {
+    background-image: url('img_parallax.jpg');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.para {
+    background-image: url('sales.jpg');
+    height: 85%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+ list-style:none;
+ text-align:center;
+ padding: 20px 0 0 0;
+}
+.nav > li{
+ display:inline-block;
+ padding:10px 25px 35px 25px;
+ font-size:30px;
+}
+.nav > li >a{
+ text-decoration:none;
+ color:white;
+}
+.nav > li > a:hover{
+ color:#c1c1c1;
+}
+input[type=text], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 40%;
+    background-color:#ffe4e1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+h2{
+    color:white;
+    font-size: 55px;
+}
+p{
+ color:white;
+}
+ul{
+ list-style-type:none;
+ color:white;
+}
+input[type=button]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+*{
+ margin:0;
+ padding:0;
+}
+h4{
+ text-align:center;
+ margin-bottom:2;
+ margin-top:2;
+ font-size:70px;
+ color:white;
+ font-family:Brush Script MT, Brush Script Std, cursive;
+}
+ #map{
+ height: 400px;
+ width:100%;
+ margin-left:auto;
+ margin-right:auto;
+}
+</style>
+<script type="text/javascript">
+function validateForm(){
+//name
+if (document.getElementById("Name").value == 0){
+alert('please enter your name');
+document.getElementById("Name").style.backgroundColor="red";
+return false; 
+}
+else{
+document.getElementById("Name").style.backgroundColor="green";
+}
+    //Work-Number
+    if(document.getElementById("phone").value == 0){
+    alert('please enter Work  number');
+    document.getElementById("phone").style.backgroundColor="red";
+    return false;  
+    }
+    else if (isNaN(document.getElementById("phone").value)){
+    alert('please enter a valid Work number');
+    document.getElementById("phone").style.backgroundColor="red"; 
+    return false; 
+    }
+    else if(document.getElementById("phone").value.length < 10){
+    window.alert('Your  Work phone number cannot be less than 10 numbers');
+    document.getElementById("phone").style.backgroundColor="red";
+    return false;
+    }
+    else if(document.getElementById("phone").value.length > 10){
+    window.alert('Your Work phone number can only be 10 numbers');
+    document.getElementById("phone").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("phone").style.backgroundColor="green";
+    }
+    //Email
+    if(document.getElementById("email").value == 0){
+    window.alert('Please enter your email');
+    document.getElementById("email").style.backgroundColor="red";
+    return false;  
+    }
+    else if(document.getElementById("email").value.indexOf("@")<0){
+    window.alert('please enter a valid email');
+    document.getElementById("email").style.backgroundColor="red";
+    return false; 
+    }
+    else if(document.getElementById("email").value.indexOf(".")<0){
+    window.alert('please enter a valid email');
+    document.getElementById("email").style.backgroundColor="red";
+    return false;
+    }
+    else{
+    document.getElementById("email").style.backgroundColor="green";
+    }
+}
+function doSubmit(){
+ if(validateForm()==false){
+ return;
+}
+ alert("Your application has been submitted");
+}
+</script>
+
+<script> 
+var map;
+      function initMap() {
+  
+ var myLatLng = {lat:40.748, lng:-73.985};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat:40.748, lng:-73.985},
+          zoom: 18
+        });
+  var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hassell Ballet Academy'
+        });
+      }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmOVPik1lf3gIIhF8WobYe809No62PR20&callback=initMap"
+    async defer></script>
+</head>
+
+<body>
+<div class="para">
+   <ul class="nav">
+    <li><a href="index.html">Home</a><li>
+    <li><a href="about.html">About US</a><li>
+    <li><a href="inventory.html">Inventory</a><li>
+    <li><a href="js-app.html">Finance</a><li>
+   </ul>
+ <h2 >Laumi Auto Collection</h2>
+ <br>
+ <br>
+ <h2 >Who are we?</h2>
+</div>
+
+<div style="height:1050px;background-color:grey;font-size:36px"><br>
+ <p>Located is in midtown Manhattan. Laumi is the only Dealership that offers
+    the best deals on great performance cars. In addition to that we have the most
+    modern in technology vehicles. Furthermore, we have our knowledgeable staff that will assist
+    you in your financial needs by providing excellent customer service.</p><br>
+  
+  <h2>Showroom Hours</h2><br>
+  <ul>
+  <li>Monday  9am-7pm</li>
+  <li>Tuesday 9am-7pm</li>
+  <li>wednesday 9am-7pm</li>
+  <li>Thursday  9am-7pm</li>
+  <li>Friday  9am-7pm</li>
+  <li>Saturday  9am-5pm</li>
+  <li>sunday  9am-5pm</li>
+  </ul><br>
+
+  <h2>Contact Us</h2>
+  <form name="form" onsubmit="return validateForm()" method="post">
+  <input type="text" id="Name" name="Name" placeholder="Name">
+  <br>
+  <input type="text" id="phone" name="phone" placeholder="Phone Number">
+  <br>
+  <input type="text" id="email"  name="email" placeholder="email">
+  <br>
+  <input class="submit" type="button" value="Submit" onClick="doSubmit()">
+  </form>
+</div>
+
+<div id="map"></div>
+</body>
+</html>
