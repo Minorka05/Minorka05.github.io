@@ -16,6 +16,7 @@ body{
     text-align: center;
     height: 100vh;
     width:100%;
+    
 }
 
 
@@ -25,11 +26,6 @@ body{
 	list-style: none;
 	text-align: right;
     padding: 30px 0 30px 0;
-    
-   
-    
-    
-    
     
 }
 
@@ -92,7 +88,7 @@ section#work{
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fill 0.5s ease forwards 5.5s;
+    animation: fill 45s ease forwards 45s;
 }
 
 #portname path:nth-child(1){
@@ -199,22 +195,10 @@ section#work{
     color:white;
 }
 
-/* makes the lipsum arrive from the left */
-@keyframes content{
-	0%   {right:-100px;}
-	100% {right: 0;}
-}
-
-#content > h1 {
-    color:white;
-    padding: 3%;
-}
-
-
 /*3D card number 1 flipping beginning*/
 .card{
-    width:400px;
-    padding-top: 20px;
+    width:100%;
+    padding-top: 50%;
     
 }
 
@@ -389,6 +373,10 @@ li{
     display: inline-block;
     font-size: 30px;
     color: #fff;
+}
+
+i{
+    color: white;
 }
 
 li:hover{
