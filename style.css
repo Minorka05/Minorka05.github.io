@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: #f2f6e9;
+    background: #191919;
   }
 
   /*social media fonts*/
@@ -39,7 +39,7 @@ body {
 
   /*--- navigation bar ---*/
   .navbar {
-    background:lightpink;
+    background:#007F80;
   }
   .nav-link,.navbar-brand {
     color: #fff;
@@ -53,6 +53,10 @@ body {
   }
   .navbar-collapse {
     justify-content: flex-end;
+  }
+  img{
+    height: 50px;
+    width: 100px;
   }
 
 
@@ -88,10 +92,10 @@ body {
     
   }
   .description h1 {
-    color: lightpink;
+    color:white;
   }
   .description p {
-    color:lightpink;
+    color:white;
     font-size: 1.3rem;
     line-height: 1.5;
   }
@@ -100,10 +104,11 @@ body {
    /*Button that says tell me more ---*/
 
   .description button {
-    border:1px solid lightpink;
-    background:lightpink;
+    border:1px solid #007F80;
+    background:#007F80;
     border-radius: 0;
     color:#fff;
+    
   }
   .description button:hover {
     border:1px solid #fff;
@@ -126,7 +131,7 @@ body {
     left: 0;
     padding: 0 15px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: none;
     text-align: center;
   }
@@ -142,4 +147,5 @@ body {
   .features {
     margin: 0;
   }
+ 
 }
